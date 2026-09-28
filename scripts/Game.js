@@ -125,7 +125,7 @@ export default class Game {
   stateChangeEvent = new Event('stateChange');
 
   /**
-   * Holds the player's student id
+   * Holds the player's Email
    * @type {string}
    * @property
    */
@@ -152,8 +152,8 @@ export default class Game {
     // Games content as an array of characters
     this.currentContentArray = this.currentContent.split(/[ ,.]+/);
 
-    // Saving users student id
-    this.player = window.prompt("Please enter your student id");
+    // Saving users Emaol
+    this.player = window.prompt("Please enter your Email");
 
     // game init
     this.initGame();
@@ -467,7 +467,7 @@ export default class Game {
    */
   saveData() {
     let person = {
-      StudentId: this.player,
+      Email: this.player,
       WPM: this.userWPM,
       Accuracy: this.userAccuracy
     };
